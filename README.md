@@ -12,7 +12,12 @@ This Code depends on;
 
 Radio modules driver , 
 RadioHead RH_rf24  http://www.airspayce.com/mikem/arduino/RadioHead/classRH__RF24.html
-including Custom 200khz RF mask GFSK connfig file fir 26mhz oscilator based modules made with free WDS software
+
+Custom 200khz RF mask GFSK connfig file fir 26mhz oscilator based modules made with free WDS software
+had problems with this so went back to using;
+
+rf24module1.setModemConfig(RH_RF24::GFSK_Rb150Fd300);
+rf24module2.setModemConfig(RH_RF24::GFSK_Rb150Fd300);
 
 http://www.silabs.com/products/wireless/EZRadio/Pages/WirelessDevelopmentSuite.aspx
 
@@ -26,10 +31,6 @@ IMA_ADPCM audio compression library ,
 http://yxit.co.uk/source/documentation/classIMA__ADPCM.html
 
 It early days, don't expect this code to work at all !!
-
-Fo now the example code is just about working in 8 bit only sending 1 sample every 4.
-
-I will update this readme when IMA_PCM is working shortly and post radio config file.
 
 
 
